@@ -1,0 +1,26 @@
+export interface Character {
+    id?: number;
+    name?: string;
+    status?: string,
+    species?: string,
+    type?: string,
+    gender?: string,
+    origin?: {
+        name?: string,
+        url?: string;
+    },
+    location: {
+        name?: string;
+        urel?: string;
+    },
+    image?: string;
+    episode: string[];
+    url?: string;
+    created?: string;
+}
+
+export enum CharacterStatus {
+    ALIVE = "Alive",
+    DEAD = "Dead",
+    UNKNOWN = "Unknown"
+}
