@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { NavLink } from "react-router-dom";
 import portalGif from '../../assets/images/portal.gif';
 import { HeaderContainer, NavigationContainer } from "./style";
 
 function Header() {
+    const [selectedOption, setSelectedOption] = useState();
+    const options = ['Personagens', 'Locais', 'Episódios'];    
     return (
         <HeaderContainer>
             <NavigationContainer>
@@ -11,13 +13,13 @@ function Header() {
                     <img src={portalGif} alt="" />
                 </NavLink>
                 <div>
-                    <NavLink to={"/characters"}>
+                    <NavLink to={'/characters'}>
                         Personagens
                     </NavLink>
-                    <NavLink to={"/locals"}>
+                    <NavLink to={'/locals'}>
                         Locais
                     </NavLink>
-                    <NavLink to={"/episodes"}>
+                    <NavLink to={'/episodes'}>
                         Episódios
                     </NavLink>
                 </div>
