@@ -52,5 +52,28 @@ export const TrailerContainer = styled.div`
     h2 {
         color: white;
         padding-bottom: 30px;
+        font-weight: 500;
     }
 `;
+
+export const FooterContainer = styled.footer`
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    iframe {
+        padding: .2rem;
+        border-radius: 22px;
+        border: 2px solid #97ce4c;
+        margin-right: 20px;
+    }
+
+    p {
+        color: white;
+        font-size: 22px;
+    }
+    span {
+        
+        color: #97ce4c;
+    }
+`
