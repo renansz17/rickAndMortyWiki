@@ -12,8 +12,8 @@ export async function getCharacter(parameter: number) {
     }
 }
 
-export async function getCharacters(params: {name?: string ,status?:string, species?: string, type?: string, gender?: string}) {
-    const queryParams = qs.stringify(params, {skipNull:true});
+export async function getCharacters(params?: {name?: string ,status?:string, species?: string, type?: string, gender?: string}) {
+    const queryParams = qs.stringify({params}, {skipNull:true});
     try {
         return await axios.get(`https://rickandmortyapi.com/api/character/?${queryParams}`);
     } catch (error) {

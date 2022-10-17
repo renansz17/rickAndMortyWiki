@@ -8,5 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
+        background-color: #121214;
     }
 `;

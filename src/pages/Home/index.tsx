@@ -27,7 +27,6 @@ export function Home() {
 
     return (
         <MainContainer>
-            <Header />
             <div>
                 <Divider>
                     <img src={portal} alt="" />
@@ -42,12 +41,12 @@ export function Home() {
             </div>
             <TrailerContainer>
                 <h2>A sexta tempoarada está no ar, se ainda não viu, veja o trailer :D</h2>
-            <iframe width="800" height="500" 
-            src="https://www.youtube.com/embed/6Zt15L7Gy3U" 
-            title="YouTube video player" frameorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen/>
+                <iframe width="800" height="500" 
+                src="https://www.youtube.com/embed/6Zt15L7Gy3U" 
+                title="YouTube video player" frameorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen/>
             </TrailerContainer>
             <CharactersContainer >
                 {characters?.results?.map((it, key) => (
