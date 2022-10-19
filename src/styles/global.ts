@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import "../assets/fonts/get_schwifty.ttf";
+import { createGlobalStyle } from 'styled-components'
+import '../assets/fonts/get_schwifty.ttf'
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -8,6 +8,5 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
-        background-color: #121214;
     }
-`;
+`
