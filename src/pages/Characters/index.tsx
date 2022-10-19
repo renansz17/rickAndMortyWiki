@@ -1,32 +1,39 @@
-import { useEffect, useState } from "react";
-import { getCharacters } from "../../api/rickAndMortyApi";
-import { Character } from "../../models/Character";
-import { ResultPage } from "../../models/ResultPage";
-import { CharacterContainer, CharacterImage, CharactersContainer, PageContainer } from "./styles";
+import { MagnifyingGlass } from 'phosphor-react'
+import { useEffect, useState } from 'react'
+import { getCharacters } from '../../api/rickAndMortyApi'
+import { CharacterCard } from '../../components/CharacterCard'
+import { ResultPage } from '../../models/ResultPage'
+import {
+  CharactersContainer,
+  FilterContainer,
+  FilterInput,
+  PageContainer,
+  SearchContainer,
+} from './styles'
 
 export function Characters() {
-    const [characters, setCharacters] = useState<ResultPage>();
+  const [characters, setCharacters] = useState<ResultPage>()
 
-    useEffect(() => {
-        getCharacters().then((response) => {
-            setCharacters(response?.data);
-        })
-    }, []);
-    console.log(characters);
-    
+  useEffect(() => {
+    getCharacters().then((response) => {
+      setCharacters(response?.data)
+    })
+  }, [])
 
-    return  (
-        <PageContainer>
-            <CharactersContainer>
-                {characters?.results?.map(character => (
-                        <CharacterContainer>
-                            <CharacterImage src={character.image}/>
-                            <h3>{character.name}</h3>
-                        </CharacterContainer>
-                        )
-                    )
-                }
-            </CharactersContainer>
-        </PageContainer>
-    );
+  return (
+    <PageContainer>
+      <SearchContainer>
+        <h2>Personagens</h2>
+        <FilterContainer>
+          <MagnifyingGlass size={20} />
+          <FilterInput type={'text'} />
+        </FilterContainer>
+      </SearchContainer>
+      <CharactersContainer>
+        {characters?.results?.map((character, index) => (
+          <CharacterCard character={character} key={index} />
+        ))}
+      </CharactersContainer>
+    </PageContainer>
+  )
 }

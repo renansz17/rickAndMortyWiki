@@ -1,79 +1,64 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 export const MainContainer = styled.main`
-    background-color: #121214;
-`;
+  background-color: #121214;
+`
 
 export const Divider = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    img {
-     width: 50%;
-    }
-`;
+  img {
+    width: 50%;
+  }
+`
 
 export const TextContainer = styled.div`
-    margin-left: 2rem;
+  margin-left: 2rem;
 
-    h1 {
-        align-self: flex-start;
-        color: white;
-        font-size: 50px;
-    }
+  h1 {
+    align-self: flex-start;
+    color: white;
+    font-size: 50px;
+  }
 
-    p {
-        color: #97ce4c;
-        font-size: 18px;
-        font-weight: normal;
-    }
-
-`;
+  p {
+    color: #97ce4c;
+    font-size: 18px;
+    font-weight: normal;
+  }
+`
 
 export const CharactersContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 `
 export const CharacterImage = styled.img`
-    width: 90px;
-    border-radius: 30px;
+  width: 90px;
+  border-radius: 30px;
 `
 
-export const TrailerContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5rem;
-
-    h2 {
-        color: white;
-        padding-bottom: 30px;
-        font-weight: 500;
-    }
-`;
+export const TrailerContainer = styled.div``
 
 export const FooterContainer = styled.footer`
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    iframe {
-        padding: .2rem;
-        border-radius: 22px;
-        border: 2px solid #97ce4c;
-        margin-right: 20px;
-    }
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  iframe {
+    padding: 0.2rem;
+    border-radius: 22px;
+    border: 2px solid #97ce4c;
+    margin-right: 20px;
+  }
 
-    p {
-        color: white;
-        font-size: 22px;
-    }
-    span {
-        
-        color: #97ce4c;
-    }
+  p {
+    color: white;
+    font-size: 22px;
+  }
+  span {
+    color: #97ce4c;
+  }
 `
