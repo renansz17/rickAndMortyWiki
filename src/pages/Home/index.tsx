@@ -26,7 +26,7 @@ export function Home() {
           </TextContainer>
         </Divider>
       </div>
-      <FooterContainer></FooterContainer>
+      {/* <FooterContainer></FooterContainer> */}
     </MainContainer>
   )
 }

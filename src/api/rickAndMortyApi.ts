@@ -19,8 +19,9 @@ export async function getCharacters(params?: {
   species?: string
   type?: string
   gender?: string
+  page?: number
 }) {
-  const queryParams = qs.stringify({ params }, { skipNull: true })
+  const queryParams = qs.stringify(params, { skipNull: true })
   try {
     return await axios.get(`${defaultUrl}/character/?${queryParams}`)
   } catch (error) {
@@ -33,7 +34,7 @@ export async function getLocations(params?: {
   type?: string
   dimension?: string
 }) {
-  const queryParams = qs.stringify({ params }, { skipNull: true })
+  const queryParams = qs.stringify(params, { skipNull: true })
   try {
     return await axios.get(`${defaultUrl}/location/?${queryParams}`)
   } catch (error) {
@@ -45,7 +46,7 @@ export async function getEpisodes(params?: {
   name?: string
   episode?: string
 }) {
-  const queryParams = qs.stringify({ params }, { skipNull: true })
+  const queryParams = qs.stringify(params, { skipNull: true })
   try {
     return await axios.get(`${defaultUrl}/episode/?${queryParams}`)
   } catch (error) {

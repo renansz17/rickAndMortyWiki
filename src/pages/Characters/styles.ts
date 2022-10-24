@@ -34,11 +34,15 @@ export const FilterInput = styled.input`
     outline: 2px solid #97ce4c;
   }
 `
-
 export const FilterButton = styled.button`
   background-color: #97ce4c;
   color: white;
   border: none;
   border-radius: 20px;
   width: 50px;
+`
+export const PaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

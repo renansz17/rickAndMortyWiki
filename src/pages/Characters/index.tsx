@@ -1,3 +1,4 @@
+import { makeStyles, Pagination } from '@mui/material'
 import { MagnifyingGlass } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 import { getCharacters } from '../../api/rickAndMortyApi'
@@ -8,17 +9,23 @@ import {
   FilterContainer,
   FilterInput,
   PageContainer,
+  PaginationContainer,
   SearchContainer,
 } from './styles'
 
 export function Characters() {
   const [characters, setCharacters] = useState<ResultPage>()
+  const [page, setPage] = useState(1)
+
+  function handleChange(event, value: number) {
+    setPage(value)
+  }
 
   useEffect(() => {
-    getCharacters().then((response) => {
+    getCharacters({ page }).then((response) => {
       setCharacters(response?.data)
     })
-  }, [])
+  }, [page])
 
   return (
     <PageContainer>
@@ -34,6 +41,14 @@ export function Characters() {
           <CharacterCard character={character} key={index} />
         ))}
       </CharactersContainer>
+      <PaginationContainer>
+        <Pagination
+          count={characters?.info?.pages}
+          page={page}
+          onChange={handleChange}
+          defaultPage={1}
+        />
+      </PaginationContainer>
     </PageContainer>
   )
 }
