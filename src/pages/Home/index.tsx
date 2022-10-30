@@ -1,5 +1,5 @@
 import portal from '../../assets/images/portal.png'
-import tranquileba from '../../assets/images/tranquileba.jpg'
+import pickle from '../../assets/images/pickle.png'
 import {
   Divider,
   FooterContainer,
@@ -26,7 +26,6 @@ export function Home() {
           </TextContainer>
         </Divider>
       </div>
-      {/* <FooterContainer></FooterContainer> */}
     </MainContainer>
   )
 }

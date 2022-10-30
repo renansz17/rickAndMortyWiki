@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const PageContainer = styled.div`
   padding: 2rem;
   background-color: #121214;
+  font-family: 'Poppins', sans-serif;
+  min-height: calc(100vh - 82px - 65px);
 `
 export const CharactersContainer = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2.5rem;
 `
 export const SearchContainer = styled.div`
@@ -31,7 +33,7 @@ export const FilterInput = styled.input`
   padding-left: 1rem;
   height: 1.5rem;
   &:focus {
-    outline: 2px solid #97ce4c;
+    outline: none;
   }
 `
 export const FilterButton = styled.button`
@@ -45,4 +47,20 @@ export const PaginationContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  .MuiPaginationItem-root {
+    color: white;
+  }
+  margin-top: 2rem;
+`
+export const EmptyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  img {
+    width: 160px;
+    border-radius: 32px;
+  }
+  color: white;
 `

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 export const MainContainer = styled.main`
   background-color: #121214;
+  font-family: 'Poppins', sans-serif;
+  min-height: calc(100vh - 82px - 65px);
 `
 
 export const Divider = styled.div`
@@ -40,9 +42,7 @@ export const CharacterImage = styled.img`
   border-radius: 30px;
 `
 
-export const TrailerContainer = styled.div``
-
-export const FooterContainer = styled.footer`
+export const TrailerContainer = styled.div`
   color: white;
   display: flex;
   justify-content: space-around;
