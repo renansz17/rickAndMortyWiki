@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CharacterContainer = styled.div`
   background-color: #e6ebee;
-  width: 200px;
+  width: 300px;
 `
 export const InfoContainer = styled.div`
   padding-left: 10px;
