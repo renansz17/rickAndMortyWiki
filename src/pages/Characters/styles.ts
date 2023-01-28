@@ -9,8 +9,10 @@ export const PageContainer = styled.div`
 export const CharactersContainer = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
 `
 export const SearchContainer = styled.div`
   display: flex;

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 export const MainContainer = styled.main`
   background-color: #121214;
@@ -9,10 +10,6 @@ export const Divider = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  img {
-    width: 50%;
-  }
 `
 
 export const TextContainer = styled.div`
@@ -62,3 +59,4 @@ export const TrailerContainer = styled.div`
     color: #97ce4c;
   }
 `
+export const LogoComponent = styled(motion.div)``
