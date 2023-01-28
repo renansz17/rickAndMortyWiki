@@ -1,12 +1,5 @@
 import portal from '../../assets/images/portal.png'
-import pickle from '../../assets/images/pickle.png'
-import {
-  Divider,
-  FooterContainer,
-  MainContainer,
-  TextContainer,
-  TrailerContainer,
-} from './styles'
+import { Divider, MainContainer, TextContainer } from './styles'
 
 export function Home() {
   return (

@@ -4,10 +4,10 @@ import { ResultPageEpisode } from '../../models/ResultPage'
 
 export function Episodes() {
   const [episodes, setEpisodes] = useState<ResultPageEpisode>()
-
+  const params = {}
   useEffect(() => {
-    getEpisodes().then((response) => setEpisodes(response?.data))
-  }, [])
+    getEpisodes(params).then((response) => setEpisodes(response?.data))
+  }, [params])
 
   return (
     <>

@@ -1,10 +1,4 @@
-import {
-  createTheme,
-  makeStyles,
-  Pagination,
-  ThemeProvider,
-} from '@mui/material'
-import { MagnifyingGlass } from 'phosphor-react'
+import { createTheme, Pagination, ThemeProvider } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { getCharacters } from '../../api/rickAndMortyApi'
 import { CharacterCard } from '../../components/CharacterCard'
@@ -38,10 +32,10 @@ export function Characters() {
       },
     },
   })
-  function handleChange(event, value: number) {
+  function handleChange(event: any, value: number) {
     setPage(value)
   }
-  function handleOnChangeText(event) {
+  function handleOnChangeText(event: any) {
     setFilterName(event.target.value)
   }
   const EmptyCharacters = () => {
