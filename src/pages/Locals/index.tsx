@@ -5,10 +5,10 @@ import { LocationPage } from './styles'
 
 export function Locals() {
   const [locations, setLocations] = useState<ResultPageLocation>()
-
+  const params = {}
   useEffect(() => {
-    getLocations().then((response) => setLocations(response?.data))
-  }, [])
+    getLocations(params).then((response) => setLocations(response?.data))
+  }, [params])
 
   return (
     <LocationPage>

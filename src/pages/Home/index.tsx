@@ -1,14 +1,7 @@
-import portal from '../../assets/images/portal.png'
 import soloPortal from '../../assets/images/soloPortal.png'
 import logoRick from '../../assets/images/logoRick.png'
 import rickAndMorty from '../../assets/images/rickAndMorty.png'
-import {
-  Divider,
-  FooterContainer,
-  MainContainer,
-  TextContainer,
-  TrailerContainer,
-} from './styles'
+import { Divider, MainContainer, TextContainer } from './styles'
 import { motion } from 'framer-motion'
 
 export function Home() {
